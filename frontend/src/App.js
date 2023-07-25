@@ -1,17 +1,23 @@
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Search from './components/Search';
-
-const handleSearchSubmit = (e) => {
-  e.preventDefault();
-  console.log(e);
-};
+import React from 'react';
 
 function App() {
+  let [word, setWord] = useState('');
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    console.log(word);
+  };
+
+  console.log(word);
+
   return (
     <div className="App">
       <Header />
-      <Search handleSubmit={handleSearchSubmit}/>
+      <Search word={word} setWord={setWord} handleSubmit={handleSearchSubmit}/>
     </div>
   );
 }

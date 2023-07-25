@@ -1,24 +1,27 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-const Search = ({handleSearch}) => {
+const Search = ({word, setWord, handleSubmit}) => {
   return (
     <Container className='mt-4'>
       <Row className="justify-content-center">
         <Col xs={12} md={8} lg={6}>
-          <Form onSubmit={handleSearch}>
-            <Form.Row>
+          <Form onSubmit={handleSubmit}>
+            <Row>
               <Col xs={9}>
-                <Form.Group className="mb-3">
-                  <Form.CoForm.ntrol type="text" placeholder="Search new image..." />
-                </Form.Group>
+                <Form.Control 
+                  type="text" 
+                  value={word}
+                  onChange={(e) => setWord(e.target.value)}
+                  placeholder="Search new image..."
+                />
               </Col>
               <Col>
                 <Button variant="primary" type="submit">
                   Search
                 </Button>
               </Col>
-            </Form.Row>
+            </Row>
           </Form>
           </Col>
         </Row>
@@ -26,4 +29,4 @@ const Search = ({handleSearch}) => {
   );
 };
 
-export default Sear
+export default Search;
