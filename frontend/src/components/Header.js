@@ -2,8 +2,9 @@ import React from 'react';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 
 const navebarStyle = {
-    backgroundColor: 'darkblue',
-    padding: '10px 20px'
+    backgroundColor: '#002255',
+    padding: '10px 20px',
+    color: '#04f3f5'
 }
 
 const Header = () => {
@@ -11,7 +12,7 @@ const Header = () => {
         <Navbar style={navebarStyle} data-bs-theme="dark">
             <Container>
                 <Navbar.Brand href="/">Images Gallery</Navbar.Brand>
-                <Nav>
+                <Nav style={{color: '#04f3f5'}}>
                     <Nav.Link href="/">Home</Nav.Link>
                 </Nav>
             </Container>
