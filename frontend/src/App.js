@@ -1,11 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Search from './components/Search';
+
+const handleSearchSubmit = (e) => {
+  e.preventDefault();
+  console.log(e);
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Images Gallery</h1>
-      </header>
+      <Header />
+      <Search handleSubmit={handleSearchSubmit}/>
     </div>
   );
 }
